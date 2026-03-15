@@ -1,0 +1,16 @@
+{
+  "name": "ROMA MODA STYLE",
+  "short_name": "ROMA MODA",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#b8860b",
+  "description": "متجر للأحذية والحقائب النسائية الفاخرة",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
