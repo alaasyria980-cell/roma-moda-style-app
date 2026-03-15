@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROMA MODA STYLE | دبي | تشكيلة العائلة</title>
+    <title>ROMA MODA STYLE | دبي | تشكيلة الحقائب الملكية</title>
     <style>
         :root { --gold: #b8860b; --bg: #fdfaf6; --dark: #1a1a1a; --pink: #ffb6c1; }
         body { font-family: 'Times New Roman', serif; margin: 0; background: var(--bg); color: var(--dark); }
@@ -19,34 +19,33 @@
         nav a { text-decoration: none; color: var(--dark); font-size: 14px; font-weight: bold; padding: 5px 10px; }
         nav a:hover { color: var(--gold); }
 
-        /* الواجهة الكبيرة */
+        /* الواجهة الكبيرة بصورة الحقيبة الكلاسيكية (مثال) */
         .hero { 
             height: 50vh; 
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1350&q=80'); 
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('image_6.png'); 
             background-size: cover; background-position: center;
             display: flex; align-items: center; justify-content: center; color: white; text-align: center;
         }
         .hero h2 { font-size: 3rem; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); margin: 0; }
         .hero p { font-size: 1.2rem; text-shadow: 1px 1px 4px rgba(0,0,0,0.5); }
 
-        /* شبكة المنتجات (9 صور متنوعة: نساء وأطفال) */
+        /* شبكة المنتجات (9 صور متنوعة: صورك الحقيقية وصور إضافية) */
         .main-grid { padding: 40px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         
         .product-card { background: white; padding: 15px; text-align: center; border: 1px solid #eee; transition: 0.3s; position: relative; overflow: hidden; }
         .product-card:hover { transform: translateY(-5px); border-color: var(--gold); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
         
-        /* شارة "جديد" أو "بناتي" */
+        /* شارة "جديد" */
         .badge { position: absolute; top: 10px; left: 10px; background: var(--gold); color: white; padding: 5px 10px; font-size: 10px; font-weight: bold; border-radius: 20px; }
-        .badge.kids { background: var(--pink); color: var(--dark); }
 
-        .product-card img { width: 100%; height: 300px; object-fit: cover; margin-bottom: 15px; }
+        .product-card img { width: 100%; height: 350px; object-fit: contain; background: white; margin-bottom: 15px; }
         .product-card h4 { margin: 10px 0; font-size: 1.1rem; color: var(--dark); }
         .price { color: var(--gold); font-weight: bold; font-size: 1.2rem; margin: 5px 0; }
         
         .buy-btn { background: var(--gold); color: white; border: none; padding: 12px; width: 100%; cursor: pointer; margin-top: 10px; font-weight: bold; font-size: 1rem; transition: 0.2s; }
         .buy-btn:hover { background: #966d08; }
 
-        @media (max-width: 768px) { .hero h2 { font-size: 2.2rem; } .logo { font-size: 1.8rem; } .main-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); } }
+        @media (max-width: 768px) { .hero h2 { font-size: 2.2rem; } .logo { font-size: 1.8rem; } .main-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); } .product-card img { height: 250px; } }
     </style>
 </head>
 <body>
@@ -55,89 +54,86 @@
 
     <header>
         <h1 class="logo">ROMA MODA STYLE</h1>
-        <p class="sub-logo">LUXURY FASHION FOR THE FAMILY - UAE</p>
+        <p class="sub-logo">LUXURY HANDBAGS & ACCESSORIES - UAE</p>
     </header>
 
     <nav>
         <a href="#">الرئيسية</a>
-        <a href="#">حقائب سهرة</a>
-        <a href="#">كعب عالي</a>
-        <a href="#">أحذية رياضية</a>
-        <a href="#" style="color:var(--pink);">تشكيلة البناتي</a> <a href="#">تواصل معنا</a>
+        <a href="#" style="color:var(--gold);">حقائب سهرة مرصعة</a> <a href="#">حقائب كلاسيكية</a>
+        <a href="#">تشكيلة البناتي</a>
+        <a href="#">تواصل معنا</a>
     </nav>
 
     <section class="hero">
         <div>
-            <h2>موسم الأناقة والتميز لكِ ولصغيرتكِ</h2>
-            <p>اكتشفي الفخامة الإيطالية لجميع أفراد العائلة</p>
+            <h2>اكتشفي سحر الحقائب الملكية</h2>
+            <p>الفخامة الإيطالية في كل تفصيل</p>
         </div>
     </section>
 
     <section class="main-grid">
         
         <div class="product-card">
+            <span class="badge">الأكثر فخامة</span>
+            <img src="image_7.png" alt="حقيبة مرصعة باللؤلؤ">
+            <h4>حقيبة سهرة مرصعة باللؤلؤ الملكي</h4>
+            <p class="price">1250 درهم</p>
+            <button class="buy-btn">اطلبي الآن</button>
+        </div>
+
+        <div class="product-card">
+            <span class="badge">جديد</span>
+            <img src="image_8.png" alt="حقيبة سهرة سوداء">
+            <h4>كلاتش سهرة أسود مرصع بالكامل</h4>
+            <p class="price">950 درهم</p>
+            <button class="buy-btn">اطلبي الآن</button>
+        </div>
+
+        <div class="product-card">
+            <img src="image_6.png" alt="حقيبة عنابية كلاسيكية">
+            <h4>حقيبة يد كلاسيكية عنابية فاخرة</h4>
+            <p class="price">1100 درهم</p>
+            <button class="buy-btn">اطلبي الآن</button>
+        </div>
+
+        <div class="product-card">
             <span class="badge">الأكثر مبيعاً</span>
-            <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?auto=format&fit=crop&w=500&q=80">
-            <h4>حقيبة سهرة ذهبية مرصعة</h4>
-            <p class="price">850 درهم</p>
+            <img src="image_9.png" alt="حقيبة ذهبية مرصعة">
+            <h4>كلاتش سهرة ذهبي مرصع بالألماس</h4>
+            <p class="price">1050 درهم</p>
             <button class="buy-btn">اطلبي الآن</button>
         </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=500&q=80">
-            <h4>سنيكرز "روما" المريح (أبيض وذهبي)</h4>
-            <p class="price">450 درهم</p>
-            <button class="buy-btn">اطلبي الآن</button>
-        </div>
-
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=500&q=80">
+            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=500&q=80" alt="حذاء كعب">
             <h4>حذاء كعب كلاسيك أزرق ملكي</h4>
             <p class="price">650 درهم</p>
             <button class="buy-btn">اطلبي الآن</button>
         </div>
 
         <div class="product-card">
-            <span class="badge kids">بناتي فخم</span>
-            <img src="https://images.unsplash.com/photo-1519457431-65cc6516b02b?auto=format&fit=crop&w=500&q=80">
-            <h4>صندل بناتي ملكي مرصع (ذهبي)</h4>
+            <img src="https://images.unsplash.com/photo-1519457431-65cc6516b02b?auto=format&fit=crop&w=500&q=80" alt="حقيبة بناتي">
+            <h4>حقيبة صغيرة بناتي ذهبية كيوت</h4>
             <p class="price">280 درهم</p>
             <button class="buy-btn">اطلبي الآن</button>
         </div>
 
         <div class="product-card">
-            <span class="badge kids">جديد للأطفال</span>
-            <img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=500&q=80">
-            <h4>شوز سبورت بناتي (وردي لامع)</h4>
-            <p class="price">190 درهم</p>
+            <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=500&q=80" alt="سنيكرز">
+            <h4>سنيكرز روما المريح (أبيض وذهبي)</h4>
+            <p class="price">450 درهم</p>
             <button class="buy-btn">اطلبي الآن</button>
         </div>
 
         <div class="product-card">
-            <span class="badge kids">طقم للأميرة</span>
-            <img src="https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?auto=format&fit=crop&w=500&q=80">
-            <h4>طقم شنطة صغيرة للأطفال (أبيض)</h4>
-            <p class="price">150 درهم</p>
-            <button class="buy-btn">اطلبي الآن</button>
-        </div>
-
-        <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=80">
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=80" alt="حقيبة كاجوال">
             <h4>حقيبة يد جلد فاخرة (بني)</h4>
             <p class="price">920 درهم</p>
             <button class="buy-btn">اطلبي الآن</button>
         </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=500&q=80">
-            <h4>كلاتش سهرة أسود مرصع</h4>
-            <p class="price">700 درهم</p>
-            <button class="buy-btn">اطلبي الآن</button>
-        </div>
-
-        <div class="product-card">
-            <span class="badge">الأكثر راحة</span>
-            <img src="https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&w=500&q=80">
+            <img src="https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?auto=format&fit=crop&w=500&q=80" alt="صندل">
             <h4>صندل صيفي أنيق (بيج)</h4>
             <p class="price">380 درهم</p>
             <button class="buy-btn">اطلبي الآن</button>
