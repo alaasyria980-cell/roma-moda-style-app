@@ -3,43 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROMA MODA STYLE | عالم الأناقة</title>
+    <title>ROMA MODA STYLE | دبي</title>
     <style>
         :root { --gold: #b8860b; --cream: #fdfaf6; }
         body { font-family: 'Times New Roman', serif; margin: 0; direction: rtl; background: #fff; }
         header { text-align: center; padding: 30px; border-bottom: 1px solid var(--cream); }
-        .hero { height: 40vh; background: var(--cream); display: flex; align-items: center; justify-content: center; text-align: center; border-bottom: 2px solid var(--gold); }
-        .hero h2 { font-size: 2rem; color: var(--gold); }
-        .products { padding: 40px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .card { border: 1px solid #eee; padding: 20px; text-align: center; }
-        .placeholder { width: 100%; height: 200px; background: #f9f9f9; display: flex; align-items: center; justify-content: center; color: #ccc; margin-bottom: 15px; border: 1px dashed var(--gold); }
-        .price { color: var(--gold); font-weight: bold; font-size: 1.2rem; }
-        .btn { background: var(--gold); color: white; border: none; padding: 10px 20px; cursor: pointer; width: 100%; }
+        
+        /* قسم البوتيك الفخم (الهيرو) */
+        .hero { 
+            height: 60vh; 
+            background: url('https://image.spreadshirtmedia.com/image-server/v1/mp/products/T210A2MPA3176PT17X46Y3D1022881261S50/views/1,width=1200,height=630,appearanceId=2,backgroundColor=F2F2F2/black-designer-bag-with-gold-accents-mug.jpg') no-repeat center center; 
+            background-size: cover; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            color: white; 
+            position: relative;
+        }
+        .hero-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); }
+        .hero-content { position: relative; z-index: 10; }
+        .hero h2 { font-size: 3rem; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        
+        /* قسم المنتجات */
+        .products { padding: 50px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { border: 1px solid #eee; padding: 20px; text-align: center; transition: 0.3s; }
+        .card:hover { border-color: var(--gold); }
+        .product-image { width: 100%; height: 300px; object-fit: contain; margin-bottom: 15px; }
+        .price { color: var(--gold); font-weight: bold; font-size: 1.3rem; margin: 10px 0; }
+        .btn { background: var(--gold); color: white; border: none; padding: 12px 20px; cursor: pointer; width: 100%; font-size: 1.1rem; }
     </style>
 </head>
 <body>
     <header>
         <h1 style="letter-spacing: 5px; margin:0;">ROMA MODA STYLE</h1>
-        <p style="color:var(--gold); font-size: 10px;">LUXURY SHOES & HANDBAGS</p>
+        <p style="color:var(--gold); font-size: 10px; letter-spacing: 2px;">LUXURY SHOES & HANDBAGS - UAE</p>
     </header>
 
     <section class="hero">
-        <div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
             <h2>موسم الأناقة:<br>اكتشفي تشكيلتنا الجديدة</h2>
-            <button class="btn" style="width: auto; padding: 10px 40px;">تسوقي الآن</button>
+            <button class="btn" style="width: auto; padding: 15px 50px; margin-top:20px;">تسوقي الآن</button>
         </div>
     </section>
 
     <section class="products">
         <div class="card">
-            <div class="placeholder">صورة الحقيبة قريباً</div>
-            <h4>حقيبة يد فاخرة</h4>
+            <img src="https://image.spreadshirtmedia.com/image-server/v1/mp/products/T210A2MPA3176PT17X11Y41D1022881261S50/views/1,width=800,height=800,appearanceId=2,backgroundColor=F2F2F2/black-designer-bag-with-gold-accents-large-bag.jpg" alt="حقيبة فاخرة" class="product-image">
+            <h4>حقيبة روما الكلاسيكية</h4>
             <p class="price">950 درهم إماراتي</p>
             <button class="btn">إضافة للسلة</button>
         </div>
         <div class="card">
-            <div class="placeholder">صورة الحذاء قريباً</div>
-            <h4>حذاء كعب ملكي</h4>
+            <img src="https://th.bing.com/th/id/OIP.w07G6b_K7zHq3mI7N1mPswHaHa?pid=ImgDet&rs=1" alt="حذاء فخم" class="product-image">
+            <h4>حذاء كعب ملكي مرصع</h4>
             <p class="price">750 درهم إماراتي</p>
             <button class="btn">إضافة للسلة</button>
         </div>
