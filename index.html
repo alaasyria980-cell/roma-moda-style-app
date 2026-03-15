@@ -3,64 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROMA MODA STYLE | دبي</title>
+    <title>ROMA MODA STYLE | المتجر الرسمي</title>
     <style>
-        :root { --gold: #b8860b; --cream: #fdfaf6; }
-        body { font-family: 'Times New Roman', serif; margin: 0; direction: rtl; background: #fff; }
-        header { text-align: center; padding: 30px; border-bottom: 1px solid var(--cream); }
+        :root { --gold: #b8860b; --bg-cream: #f9f8f3; --text-dark: #333; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: var(--bg-cream); color: var(--text-dark); }
         
-        /* قسم البوتيك الفخم (الهيرو) */
-        .hero { 
-            height: 60vh; 
-            background: url('https://image.spreadshirtmedia.com/image-server/v1/mp/products/T210A2MPA3176PT17X46Y3D1022881261S50/views/1,width=1200,height=630,appearanceId=2,backgroundColor=F2F2F2/black-designer-bag-with-gold-accents-mug.jpg') no-repeat center center; 
-            background-size: cover; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            text-align: center; 
-            color: white; 
-            position: relative;
-        }
-        .hero-overlay { position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5); }
-        .hero-content { position: relative; z-index: 10; }
-        .hero h2 { font-size: 3rem; color: #fff; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        
-        /* قسم المنتجات */
-        .products { padding: 50px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { border: 1px solid #eee; padding: 20px; text-align: center; transition: 0.3s; }
-        .card:hover { border-color: var(--gold); }
-        .product-image { width: 100%; height: 300px; object-fit: contain; margin-bottom: 15px; }
-        .price { color: var(--gold); font-weight: bold; font-size: 1.3rem; margin: 10px 0; }
-        .btn { background: var(--gold); color: white; border: none; padding: 12px 20px; cursor: pointer; width: 100%; font-size: 1.1rem; }
+        /* الشريط العلوي */
+        .promo-bar { background: var(--gold); color: white; text-align: center; padding: 5px; font-size: 12px; }
+
+        /* الهيدر الرئيسي */
+        header { background: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; }
+        .logo { font-size: 24px; font-weight: bold; letter-spacing: 2px; }
+        nav a { margin: 0 15px; text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 14px; }
+        nav a.active { color: var(--gold); border-bottom: 2px solid var(--gold); }
+        .icons { display: flex; gap: 20px; font-size: 18px; }
+
+        /* منطقة المنتج الرئيسي (مثل صورتك) */
+        .product-container { display: flex; flex-wrap: wrap; padding: 40px 5%; background: white; margin: 20px 5%; gap: 40px; }
+        .product-gallery { flex: 1; min-width: 300px; }
+        .main-img { width: 100%; border-radius: 4px; }
+        .thumb-grid { display: flex; gap: 10px; margin-top: 15px; }
+        .thumb-grid img { width: 80px; height: 80px; border: 1px solid #eee; cursor: pointer; }
+
+        .product-details { flex: 1; min-width: 300px; }
+        .brand-label { color: var(--gold); font-size: 14px; }
+        .product-title { font-size: 28px; margin: 10px 0; }
+        .price-tag { font-size: 24px; color: var(--gold); font-weight: bold; margin-bottom: 20px; }
+        .description { line-height: 1.8; color: #666; font-size: 15px; border-top: 1px solid #eee; padding-top: 20px; }
+        .specs { margin: 20px 0; font-size: 14px; }
+        .specs li { margin-bottom: 8px; list-style: none; }
+
+        /* زر الإضافة للسلة */
+        .add-to-cart { background: var(--gold); color: white; border: none; padding: 15px 40px; width: 100%; font-size: 16px; cursor: pointer; transition: 0.3s; }
+        .add-to-cart:hover { opacity: 0.9; }
+
+        /* قسم "قد يعجبك أيضاً" */
+        .related { padding: 0 5% 40px; }
+        .related-title { border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-bottom: 20px; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .item-card { background: white; padding: 10px; text-align: center; border: 1px solid #eee; }
+        .item-card img { width: 100%; height: 180px; object-fit: contain; }
+
     </style>
 </head>
 <body>
+
+    <div class="promo-bar">شحن مجاني على جميع الطلبيات فوق 500 درهم - ROMA MODA STYLE</div>
+
     <header>
-        <h1 style="letter-spacing: 5px; margin:0;">ROMA MODA STYLE</h1>
-        <p style="color:var(--gold); font-size: 10px; letter-spacing: 2px;">LUXURY SHOES & HANDBAGS - UAE</p>
+        <div class="search-icon">🔍</div>
+        <div class="logo">ROMA MODA STYLE</div>
+        <div class="icons">👤 🛒</div>
     </header>
 
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h2>موسم الأناقة:<br>اكتشفي تشكيلتنا الجديدة</h2>
-            <button class="btn" style="width: auto; padding: 15px 50px; margin-top:20px;">تسوقي الآن</button>
-        </div>
-    </section>
+    <nav style="text-align: center; background: white; padding: 10px; border-bottom: 1px solid #eee;">
+        <a href="#" class="active">الرئيسية</a>
+        <a href="#">أحذية</a>
+        <a href="#">حقائب</a>
+        <a href="#">العروض</a>
+        <a href="#">تواصل معنا</a>
+    </nav>
 
-    <section class="products">
-        <div class="card">
-            <img src="https://image.spreadshirtmedia.com/image-server/v1/mp/products/T210A2MPA3176PT17X11Y41D1022881261S50/views/1,width=800,height=800,appearanceId=2,backgroundColor=F2F2F2/black-designer-bag-with-gold-accents-large-bag.jpg" alt="حقيبة فاخرة" class="product-image">
-            <h4>حقيبة روما الكلاسيكية</h4>
-            <p class="price">950 درهم إماراتي</p>
-            <button class="btn">إضافة للسلة</button>
+    <div class="product-container">
+        <div class="product-gallery">
+            <img src="https://image.spreadshirtmedia.com/image-server/v1/mp/products/T210A2MPA3176PT17X11Y41D1022881261S50/views/1,width=800,height=800,appearanceId=2,backgroundColor=F2F2F2/black-designer-bag-with-gold-accents-large-bag.jpg" class="main-img">
+            <div class="thumb-grid">
+                <img src="https://image.spreadshirtmedia.com/image-server/v1/mp/products/T210A2MPA3176PT17X11Y41D1022881261S50/views/1,width=200,height=200,appearanceId=2,backgroundColor=F2F2F2/black-designer-bag.jpg">
+                <img src="https://image.spreadshirtmedia.com/image-server/v1/mp/products/T210A2MPA3176PT17X46Y3D1022881261S50/views/1,width=200,height=200,appearanceId=2,backgroundColor=F2F2F2/black-designer-bag.jpg">
+            </div>
         </div>
-        <div class="card">
-            <img src="https://th.bing.com/th/id/OIP.w07G6b_K7zHq3mI7N1mPswHaHa?pid=ImgDet&rs=1" alt="حذاء فخم" class="product-image">
-            <h4>حذاء كعب ملكي مرصع</h4>
-            <p class="price">750 درهم إماراتي</p>
-            <button class="btn">إضافة للسلة</button>
+
+        <div class="product-details">
+            <div class="brand-label">روما مودا ستايل</div>
+            <h1 class="product-title">حقيبة يد فاخرة</h1>
+            <div class="price-tag">950 د.إ</div>
+            
+            <p class="description">
+                حقيبة يد من الجلد الفاخر، تتميز بمقبض ذهبي وتصميم عصري مثالي للمناسبات الراقية.
+            </p>
+
+            <ul class="specs">
+                <li><strong>الأبعاد:</strong> 25سم * 20سم * 10سم</li>
+                <li><strong>الوزن:</strong> 0.8 كجم</li>
+                <li><strong>الألوان:</strong> أسود، بيج، أبيض</li>
+            </ul>
+
+            <button class="add-to-cart">إضافة إلى السلة</button>
         </div>
-    </section>
+    </div>
+
+    <div class="related">
+        <h3 class="related-title">قد يعجبك أيضاً</h3>
+        <div class="related-grid">
+            <div class="item-card">
+                <img src="https://th.bing.com/th/id/OIP.w07G6b_K7zHq3mI7N1mPswHaHa?pid=ImgDet&rs=1">
+                <p>حذاء ذهبي كلاسيكي</p>
+                <p style="color:var(--gold)">450 د.إ</p>
+            </div>
+            <div class="item-card">
+                <img src="https://image.spreadshirtmedia.com/image-server/v1/mp/products/T210A2MPA3176PT17X11Y41D1022881261S50/views/1,width=400,height=400,appearanceId=2,backgroundColor=F2F2F2/black-designer-bag.jpg">
+                <p>حقيبة سهرة صغيرة</p>
+                <p style="color:var(--gold)">650 د.إ</p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
