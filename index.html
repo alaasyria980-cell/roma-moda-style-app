@@ -2,10 +2,47 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>ROMA MODA STYLE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROMA MODA STYLE | عالم الأناقة</title>
+    <style>
+        :root { --gold: #b8860b; --cream: #fdfaf6; }
+        body { font-family: 'Times New Roman', serif; margin: 0; direction: rtl; background: #fff; }
+        header { text-align: center; padding: 30px; border-bottom: 1px solid var(--cream); }
+        .hero { height: 40vh; background: var(--cream); display: flex; align-items: center; justify-content: center; text-align: center; border-bottom: 2px solid var(--gold); }
+        .hero h2 { font-size: 2rem; color: var(--gold); }
+        .products { padding: 40px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .card { border: 1px solid #eee; padding: 20px; text-align: center; }
+        .placeholder { width: 100%; height: 200px; background: #f9f9f9; display: flex; align-items: center; justify-content: center; color: #ccc; margin-bottom: 15px; border: 1px dashed var(--gold); }
+        .price { color: var(--gold); font-weight: bold; font-size: 1.2rem; }
+        .btn { background: var(--gold); color: white; border: none; padding: 10px 20px; cursor: pointer; width: 100%; }
+    </style>
 </head>
-<body style="text-align:center; padding:100px; font-family:sans-serif;">
-    <h1 style="color:#b8860b;">ROMA MODA STYLE</h1>
-    <p>الموقع تحت التجهيز بأفخم حلة..</p>
+<body>
+    <header>
+        <h1 style="letter-spacing: 5px; margin:0;">ROMA MODA STYLE</h1>
+        <p style="color:var(--gold); font-size: 10px;">LUXURY SHOES & HANDBAGS</p>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2>موسم الأناقة:<br>اكتشفي تشكيلتنا الجديدة</h2>
+            <button class="btn" style="width: auto; padding: 10px 40px;">تسوقي الآن</button>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="card">
+            <div class="placeholder">صورة الحقيبة قريباً</div>
+            <h4>حقيبة يد فاخرة</h4>
+            <p class="price">950 درهم إماراتي</p>
+            <button class="btn">إضافة للسلة</button>
+        </div>
+        <div class="card">
+            <div class="placeholder">صورة الحذاء قريباً</div>
+            <h4>حذاء كعب ملكي</h4>
+            <p class="price">750 درهم إماراتي</p>
+            <button class="btn">إضافة للسلة</button>
+        </div>
+    </section>
 </body>
 </html>
