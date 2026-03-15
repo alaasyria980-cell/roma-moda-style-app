@@ -3,94 +3,46 @@
     --light-gold: #d4af37;
     --white: #ffffff;
     --cream: #fdfaf6;
-    --dark: #1a1a1a;
 }
 
-body {
-    font-family: 'Times New Roman', serif;
-    margin: 0;
-    direction: rtl;
-    background-color: var(--white);
-    color: var(--dark);
-}
+body { font-family: 'Times New Roman', serif; margin: 0; direction: rtl; background: var(--white); }
 
-header {
-    text-align: center;
-    padding: 30px;
-    border-bottom: 1px solid var(--cream);
-    background: var(--white);
-}
+header { text-align: center; padding: 40px; border-bottom: 1px solid var(--cream); }
+.brand-name { font-size: 2.8rem; letter-spacing: 4px; margin: 0; color: #1a1a1a; }
+.tagline { font-size: 12px; letter-spacing: 2px; color: var(--light-gold); }
 
-.brand-name {
-    font-size: 2.5rem;
-    letter-spacing: 5px;
-    margin: 0;
-    font-weight: 300;
-}
-
-/* قسم البطولة - الواجهة */
 .hero {
-    height: 70vh;
-    background-color: var(--cream);
+    height: 50vh;
+    background: var(--cream);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 20px;
     border-bottom: 2px solid var(--light-gold);
 }
 
-.hero-content h2 {
-    font-size: 2.8rem;
-    color: var(--gold);
-    margin-bottom: 20px;
-}
+.hero-content h2 { font-size: 2.5rem; color: var(--gold); }
+.btn-gold { background: var(--gold); color: white; border: none; padding: 15px 40px; cursor: pointer; }
 
-.btn-gold {
-    background: var(--gold);
-    color: white;
-    padding: 15px 45px;
-    border: none;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: 0.3s;
-}
+.products-section { padding: 50px 10%; }
+.section-title { text-align: center; margin-bottom: 40px; color: var(--gold); }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
 
-.btn-gold:hover {
-    background: var(--dark);
-}
+.product-card { border: 1px solid var(--cream); padding: 20px; text-align: center; }
 
-/* شبكة المنتجات */
-.products-section {
-    padding: 50px 10%;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.product-card {
-    border: 1px solid #eee;
-    padding: 20px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.product-card:hover {
-    border-color: var(--light-gold);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.product-card img {
+/* المربع الذهبي المؤقت مكان الصور */
+.image-placeholder {
     width: 100%;
-    height: auto;
+    height: 250px;
+    background: linear-gradient(45deg, #fdfaf6, #eee);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-gold);
+    font-weight: bold;
     margin-bottom: 15px;
+    border: 1px dashed var(--light-gold);
 }
 
-.price {
-    color: var(--gold);
-    font-weight: bold;
-    font-size: 1.2rem;
-}
+.price { color: var(--gold); font-weight: bold; }
+.add-btn { width: 100%; padding: 10px; background: none; border: 1px solid var(--gold); color: var(--gold); cursor: pointer; }
